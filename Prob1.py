@@ -1,7 +1,7 @@
 ########################################
-# Name:
-# Collaborators:
-# Estimated time spent (hr):
+# Name: Joe Tomlinson
+# Collaborators: Luke Orona
+# Estimated time spent (hr): 2
 ########################################
 
 def digital_root(n):
@@ -17,10 +17,17 @@ def digital_root(n):
         int: The digital root of the provided number
     """
     # Add your code below!
-
-
-
-
+    num = str(n)
+    if (num == "0"):
+        return 0
+    ans = 0
+    for i in range (0, len((num))):
+        ans = (ans + int(num[i])) % 9
+    return ans % 9
+    if(ans == 0):
+        return 9
+    else:
+        return ans % 9
 
 
 
